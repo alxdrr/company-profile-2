@@ -6,7 +6,7 @@ const Button = ({ variant, type, link, className, onClick, children }) => {
   let textColorClass = "text-white";
 
   if (variant === "primary") {
-    buttonClassName += "py-2 px-8 bg-[#D64923] transition-all rounded-[60px] text-white font-bold hover:bg-[#DE7C62] active:scale-90";
+    buttonClassName += "w-max py-2 px-10 bg-[#D64923] transition-all rounded-[60px] text-white font-bold hover:bg-[#DE7C62] active:scale-90";
   }
 
   return (

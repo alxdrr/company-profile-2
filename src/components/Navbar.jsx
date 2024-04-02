@@ -4,9 +4,9 @@ import Button from "./Button";
 
 const Navbar = () => {
   return (
-    <div className="max-w-full bg-[#002029]">
-      <div className="flex justify-between items-center h-28 py-3 px-6 max-w-screen-xl mx-auto text-white">
-        <img src={Logo} alt="Forcoms Logo" />
+    <div className="w-screen top-0 absolute">
+      <div className="flex justify-between items-center h-32 py-3 px-6 max-w-screen-xl w-full mx-auto text-white">
+        <img className="object-contain h-12" src={Logo} alt="Forcoms Logo" />
         <ul className="flex gap-8">
           <li className="px-3">Home</li>
           <li className="px-3">About Us</li>
@@ -14,9 +14,7 @@ const Navbar = () => {
           <li className="px-3">Portfolio</li>
           <li className="px-3">FAQ</li>
         </ul>
-        <Button variant={"primary"} type={"clickable"}>
-          Get in Touch
-        </Button>
+        <Button variant={"primary"} type={"clickable"} children={"Get in touch"}></Button>
       </div>
     </div>
   );

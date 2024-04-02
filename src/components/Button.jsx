@@ -2,11 +2,11 @@ import React from "react";
 // import { Link } from "react-router-dom";
 
 const Button = ({ variant, type, link, className, onClick, children }) => {
-  let buttonClassName = "py-2 px-8 rounded-[60px] ";
+  let buttonClassName = "";
   let textColorClass = "text-white";
 
   if (variant === "primary") {
-    buttonClassName += "bg-[#D64923] text-white font-bold";
+    buttonClassName += "py-2 px-8 bg-[#D64923] transition-all rounded-[60px] text-white font-bold hover:bg-[#DE7C62] active:scale-90";
   }
 
   return (

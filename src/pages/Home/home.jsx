@@ -3,6 +3,9 @@ import Navbar from "../../components/Navbar";
 import Button from "../../components/Button";
 import Card from "../../components/Card";
 import aboutImage from "../../assets/about.png";
+import portfolio1 from "../../assets/portfolio/tmekar.png";
+import portfolio2 from "../../assets/portfolio/artha.png";
+import portfolio3 from "../../assets/portfolio/kopi.png";
 
 const Home = () => {
   return (
@@ -20,6 +23,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* About Section */}
       <div id="about" className="About w-full max-w-screen-xl items-center flex h-auto my-16 mx-auto py-10 px-10 ">
         <section className="flex justify-center flex-col gap-10">
           <h1 className="text-primary text-4xl max-w-xl font-black">Unlock Your Development Potential With Us</h1>
@@ -30,16 +34,30 @@ const Home = () => {
         </section>
         <img className="mx-auto m-max h-max object-cover max-w-lg" src={aboutImage} alt="" />
       </div>
+      {/* Services Section */}
       <div id="about" className="Services w-full max-w-screen-xl items-center flex flex-col h-auto my-16 mx-auto py-10 px-10 gap-10">
         <section className="flex justify-center items-center flex-col gap-4">
           <h1 className="text-primary text-4xl max-w-xl font-black">Our Services</h1>
           <p className="text-xl text-center text-gray-700">We offer comprehensive web, mobile, and system development services.</p>
         </section>
         <section className="flex justify-between w-full">
-          <Card Title={"Web Development"} Desc={"With a website, your business could be improved by having a stronger brand-awareness, reaching more market like never before."}></Card>
-          <Card Title={"Mobile Development"} Desc={"With an app, your business could be enabled and scaled infinitely as onboarding customers via app is much more scalable."}></Card>
-          <Card Title={"System Development"} Desc={"With a system, your business processes could be automated and streamlined, resulting in a reduced cost, and higher net-profits."}></Card>
+          <Card Type={"service"} Title={"Web Development"} Desc={"With a website, your business could be improved by having a stronger brand-awareness, reaching more market like never before."}></Card>
+          <Card Type={"service"} Title={"Mobile Development"} Desc={"With an app, your business could be enabled and scaled infinitely as onboarding customers via app is much more scalable."}></Card>
+          <Card Type={"service"} Title={"System Development"} Desc={"With a system, your business processes could be automated and streamlined, resulting in a reduced cost, and higher net-profits."}></Card>
         </section>
+      </div>
+      {/* Recent Projects Section */}
+      <div id="about" className="Projects w-full max-w-screen-xl items-center flex flex-col h-auto my-16 mx-auto py-10 px-10 gap-10">
+        <section className="flex justify-center items-center flex-col gap-4">
+          <h1 className="text-primary text-4xl max-w-xl font-black">Recent Projects</h1>
+          <p className="text-xl text-center text-gray-700">Browse through our portfolio of completed projects.</p>
+        </section>
+        <section className="flex justify-between w-full">
+          <Card Type={"portfolio"} Title={"Timbul Mekar"} Image={portfolio1}></Card>
+          <Card Type={"portfolio"} Title={"Bali Artha Jaya"} Image={portfolio2}></Card>
+          <Card Type={"portfolio"} Title={"Kopi Gunung Sari"} Image={portfolio3}></Card>
+        </section>
+        <Button variant={"primary"} type={"clickable"}  children={"View our projects"}></Button>
       </div>
     </>
   );

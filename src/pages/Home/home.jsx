@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 import Button from "../../components/Button";
 import Card from "../../components/Card";
 import aboutImage from "../../assets/about.png";
@@ -10,6 +11,7 @@ import portfolio3 from "../../assets/portfolio/kopi.png";
 const Home = () => {
   return (
     <>
+      {/* Navbar & Hero */}
       <div className="w-full bg-primary h-screen flex flex-col justify-center">
         <Navbar />
         <div className="Hero w-full max-w-screen-xl flex flex-col justify-self-center my-auto mx-auto pt-16 gap-10">
@@ -30,7 +32,7 @@ const Home = () => {
           <p className="max-w-xl text-xl text-gray-700">
             At our software house, we offer a range of services in web, mobile, and system development. With our expertise and dedication, we provide tailored solutions to meet your unique needs and help you achieve your goals.
           </p>
-          <Button variant={"primary"} type={"clickable"} children={"Contact Us"}></Button>
+          <Button variant={"primary"} type={"clickable"} children={"Contact us"}></Button>
         </section>
         <img className="mx-auto m-max h-max object-cover max-w-lg" src={aboutImage} alt="" />
       </div>
@@ -57,8 +59,22 @@ const Home = () => {
           <Card Type={"portfolio"} Title={"Bali Artha Jaya"} Image={portfolio2}></Card>
           <Card Type={"portfolio"} Title={"Kopi Gunung Sari"} Image={portfolio3}></Card>
         </section>
-        <Button variant={"primary"} type={"clickable"}  children={"View our projects"}></Button>
+        <Button variant={"primary"} type={"clickable"} children={"View our projects"}></Button>
       </div>
+      {/* FAQ Section */}
+      {/* CTA Section */}
+      <div id="about" className="Projects w-full max-w-screen-xl items-center flex flex-col h-auto my-16 mx-auto py-10 px-10 gap-10">
+        <section className="flex justify-center items-center flex-col gap-4">
+          <h1 className="text-primary text-4xl text-center font-black">Let&apos;s Take the Next Step Together!</h1>
+          <p className="text-xl max-w-4xl text-center text-gray-700">
+            Get in touch with us today to start your digital journey. Whether you&apos;re looking to revamp your website, develop a mobile app, or streamline your operations with custom software, we&apos;re here to make it happen. Drop us a
+            line and let&apos;s make magic together!
+          </p>
+        </section>
+        <Button variant={"primary"} type={"clickable"} children={"Get in touch"}></Button>
+      </div>
+      {/* Footer */}
+      <Footer/>
     </>
   );
 };

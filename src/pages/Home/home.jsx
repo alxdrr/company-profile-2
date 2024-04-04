@@ -42,7 +42,7 @@ const Home = () => {
           <h1 className="text-primary text-center text-xl md:text-start md:text-2xl lg:text-4xl max-w-xl font-black">Our Services</h1>
           <p className="lg:text-base xl:text-xl text-center text-gray-700">We offer comprehensive web, mobile, and system development services.</p>
         </section>
-        <section className="flex flex-col gap-6 md:gap-0 md:flex-row justify-between w-full">
+        <section className="animate-pulse flex flex-col gap-6 md:gap-0 sm:flex-row justify-between w-full">
           <Card Type={"service"} Title={"Web Development"} Desc={"With a website, your business could be improved by having a stronger brand-awareness, reaching more market like never before."}></Card>
           <Card Type={"service"} Title={"Mobile Development"} Desc={"With an app, your business could be enabled and scaled infinitely as onboarding customers via app is much more scalable."}></Card>
           <Card Type={"service"} Title={"System Development"} Desc={"With a system, your business processes could be automated and streamlined, resulting in a reduced cost, and higher net-profits."}></Card>
@@ -54,7 +54,7 @@ const Home = () => {
           <h1 className="text-primary text-center text-xl md:text-start md:text-2xl lg:text-4xl max-w-xl font-black">Recent Projects</h1>
           <p className="lg:text-base xl:text-xl text-center text-gray-700">Browse through our portfolio of completed projects.</p>
         </section>
-        <section className="flex flex-col gap-6 md:gap-0 md:flex-row justify-between w-full xl:px-16">
+        <section className="flex flex-col gap-6 md:gap-0 xs:flex-row justify-between w-full xl:px-16">
           <Card Type={"portfolio"} Title={"Timbul Mekar"} Image={portfolio1}></Card>
           <Card Type={"portfolio"} Title={"Bali Artha Jaya"} Image={portfolio2}></Card>
           <Card Type={"portfolio"} Title={"Kopi Gunung Sari"} Image={portfolio3}></Card>
@@ -65,7 +65,7 @@ const Home = () => {
       {/* CTA Section */}
       <div id="about" className="Projects w-full max-w-screen-xl items-center flex flex-col h-auto my-16 mx-auto lg:py-10 px-4 gap-8 xl:gap-10 lg:px-8 xl:px-0">
         <section className="flex justify-center items-center flex-col gap-4">
-          <h1 className="text-primary text-center text-xl md:text-start md:text-2xl lg:text-4xl text-center font-black">Let&apos;s Take the Next Step Together!</h1>
+          <h1 className="text-primary text-xl md:text-start md:text-2xl lg:text-4xl text-center font-black">Let&apos;s Take the Next Step Together!</h1>
           <p className="lg:text-base xl:text-xl max-w-4xl text-center text-gray-700">
             Get in touch with us today to start your digital journey. Whether you&apos;re looking to revamp your website, develop a mobile app, or streamline your operations with custom software, we&apos;re here to make it happen. Drop us a
             line and let&apos;s make magic together!

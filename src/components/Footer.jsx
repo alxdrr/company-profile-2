@@ -5,7 +5,7 @@ import logo2 from "../assets/icons/social-linkedin.svg";
 
 const Footer = () => {
   return (
-    <div className="w-screen hidden bg-primary">
+    <div className="w-screen bg-primary">
       <div className="flex flex-col justify-center items-center h-max  py-16 px-6 max-w-screen-xl w-full mx-auto text-white gap-8">
         <main className="flex w-full justify-between lg:gap-6 xl:gap-9">
           <div className="flex flex-col">

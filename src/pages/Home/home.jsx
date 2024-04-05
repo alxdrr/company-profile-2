@@ -42,7 +42,7 @@ const Home = () => {
           <h1 className="text-primary text-center text-xl md:text-start md:text-2xl lg:text-4xl max-w-xl font-black">Our Services</h1>
           <p className="lg:text-base xl:text-xl text-center text-gray-700">We offer comprehensive web, mobile, and system development services.</p>
         </section>
-        <section className="animate-pulse flex flex-col gap-6 md:gap-0 sm:flex-row justify-between w-full">
+        <section className="flex flex-col gap-6 md:gap-0 sm:flex-row justify-between w-full">
           <Card Type={"service"} Title={"Web Development"} Desc={"With a website, your business could be improved by having a stronger brand-awareness, reaching more market like never before."}></Card>
           <Card Type={"service"} Title={"Mobile Development"} Desc={"With an app, your business could be enabled and scaled infinitely as onboarding customers via app is much more scalable."}></Card>
           <Card Type={"service"} Title={"System Development"} Desc={"With a system, your business processes could be automated and streamlined, resulting in a reduced cost, and higher net-profits."}></Card>

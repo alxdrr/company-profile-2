@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Logo from "../assets/logo.svg";
 import Button from "./Button";
 import { IoMenu, IoClose } from "react-icons/io5";
@@ -13,19 +14,29 @@ const Navbar = () => {
         <img className="h-10" src={Logo} alt="Forcoms Logo" />
         <ul className="flex lg:gap-4 xl:gap-10">
           <li className="lg:text-sm xl:text-base px-3">
-            <a href="/">Home</a>
+            <NavLink to={"/"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "hover:text-[#DE7C62] transition-colors")}>
+              Home
+            </NavLink>
           </li>
           <li className="lg:text-sm xl:text-base px-3">
-            <a href="/">About Us</a>
+            <NavLink to={"/about"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "hover:text-[#DE7C62] transition-colors")}>
+              About Us
+            </NavLink>
           </li>
           <li className="lg:text-sm xl:text-base px-3">
-            <a href="/">Services</a>
+            <NavLink to={"/services"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "hover:text-[#DE7C62] transition-colors")}>
+              Services
+            </NavLink>
           </li>
           <li className="lg:text-sm xl:text-base px-3">
-            <a href="/">Portfolio</a>
+            <NavLink to={"/portfolio"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "hover:text-[#DE7C62] transition-colors")}>
+              Portfolio
+            </NavLink>
           </li>
           <li className="lg:text-sm xl:text-base px-3">
-            <a href="/">FAQ</a>
+            <NavLink to={"/faq"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "hover:text-[#DE7C62] transition-colors")}>
+              FAQ
+            </NavLink>
           </li>
         </ul>
         <Button variant={"primary"} type={"clickable"} link={"/asdasd"} children={"Get in touch"}></Button>

@@ -28,7 +28,7 @@ const Navbar = () => {
             <a href="/">FAQ</a>
           </li>
         </ul>
-        <Button variant={"primary"} type={"clickable"} children={"Get in touch"}></Button>
+        <Button variant={"primary"} type={"clickable"} link={"/asdasd"} children={"Get in touch"}></Button>
       </div>
       {/* Mobile Nav */}
       <nav className="lg:hidden">

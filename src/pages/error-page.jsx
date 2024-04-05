@@ -18,6 +18,9 @@ const ErrorPage = () => {
             <section className="flex justify-center items-center flex-col gap-4">
               <h1 className="text-primary text-xl md:text-start md:text-2xl lg:text-4xl text-center font-black">Oops! Wrong Turn!</h1>
               <p className="lg:text-base xl:text-xl max-w-4xl text-center text-gray-700">We couldn&apos;t find what you&apos;re looking for :&#40;</p>
+              <p className="lg:text-base xl:text-xl max-w-4xl text-center text-gray-500">
+                Error Message : <i>{error.statusText || error.message}</i>
+              </p>
             </section>
             <Button variant={"primary"} type={"clickable"} children={"Go Back"}></Button>
           </div>

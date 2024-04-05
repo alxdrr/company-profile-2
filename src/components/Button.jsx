@@ -1,31 +1,35 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Button = ({ variant, type, link, className, onClick, children }) => {
-  let buttonClassName = "";
-  let textColorClass = "text-white";
+const Button = ({ type, link, children, scrollToId }) => {
+  let buttonClassName = "w-max py-2 px-10 bg-[#D64923] transition-all lg:text-base text-xs rounded-[60px] text-white lg:font-bold hover:bg-[#DE7C62] active:scale-90";
+  const handleClick = () => {
+    // Scroll to the specified ID when the button is clicked
+    if (scrollToId) {
+      const element = document.getElementById(scrollToId);
+      if (element) {
+        const offset = 80; // offset based navbar height
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - offset;
 
-  if (variant === "primary") {
-    buttonClassName += "w-max py-2 px-10 bg-[#D64923] transition-all lg:text-base text-xs rounded-[60px] text-white lg:font-bold hover:bg-[#DE7C62] active:scale-90";
-  }
-
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+  };
   return (
     <>
-      {type === "clickable" && (
-        <button onClick={onClick} className={`text-base ${buttonClassName} ${textColorClass} ${className}`} type="button">
+      {!link ? (
+        <button onClick={handleClick} className={buttonClassName} to={link}>
           {children}
         </button>
-      )}
-      {type === "button" && (
-        <button className={`text-base ${buttonClassName} ${textColorClass} ${className}`} type="submit">
-          {children}
-        </button>
-      )}
-      {/* {link && (
-        <Link className={`text-base h-fit ${buttonClassName} ${textColorClass} ${className}`} to={link}>
+      ) : (
+        <Link className={buttonClassName} to={link}>
           {children}
         </Link>
-      )} */}
+      )}
     </>
   );
 };

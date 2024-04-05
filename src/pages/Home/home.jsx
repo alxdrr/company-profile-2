@@ -21,7 +21,7 @@ const Home = () => {
           </div>
           <div className="flex flex-col gap-8 xl:gap-10">
             <div className="text-white lg:text-xl font-normal xl:max-w-xl">Innovative Software House to Bring Your Ideas to Life. We are your trusted partner in web, mobile, and software development.</div>
-            <Button variant={"primary"} type={"clickable"} children={"Dive in"} href={"#about"}></Button>
+            <Button variant={"primary"} children={"Dive in"} type={"clickable"} scrollToId={"about"}></Button>
           </div>
         </div>
       </div>

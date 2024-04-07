@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Button = ({ type, link, children, scrollToId }) => {
+const Button = ({ link, children, scrollToId, onClick }) => {
   let buttonClassName = "w-max py-2 px-10 bg-[#D64923] transition-all lg:text-base text-xs rounded-[60px] text-white lg:font-bold hover:bg-[#DE7C62] active:scale-90";
   const handleClick = () => {
     // Scroll to the specified ID when the button is clicked

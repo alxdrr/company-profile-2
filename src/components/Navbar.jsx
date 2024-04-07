@@ -1,6 +1,7 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Logo from "../assets/logo.svg";
+import Logo2 from "../assets/logo2.svg";
 import Button from "./Button";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { useState } from "react";
@@ -8,33 +9,51 @@ import { useState } from "react";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleNav = () => setNav(!nav);
+  const location = useLocation()
+  const handleClick = () => {
+    const element = document.getElementById("about");
+    const offset = 80; // offset based on navbar height
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - offset;
+
+    // Check if not on home page, then redirect to home page first
+
+    setTimeout(() => {
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }, 100); // Adjust timeout to ensure redirection to home page is complete before scrolling
+  };
+  const navBg = location.pathname === "/" || location.pathname === "/portfolio" ? "bg-primary" : "bg-white"
+  const navColor = location.pathname === "/" || location.pathname === "/portfolio" ? "text-white" : "text-primary"
   return (
-    <div className="w-screen top-0 lg:fixed bg-primary z-10">
+    <div className={`w-screen top-0 lg:fixed z-10 ${navBg}`}>
       <div className="hidden lg:flex justify-between items-center h-20 mx-auto px-14 max-w-screen-xl w-full text-white">
         <img className="h-10" src={Logo} alt="Forcoms Logo" />
         <ul className="flex lg:gap-4 xl:gap-10">
           <li className="lg:text-sm xl:text-base px-3">
-            <NavLink to={"/"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "hover:text-[#DE7C62] transition-colors")}>
+            <NavLink to={"/"} className={({ isActive }) => (isActive ? `text-secondary font-black` : `hover:text-[#DE7C62] transition-colors ${navColor}`)}>
               Home
             </NavLink>
           </li>
           <li className="lg:text-sm xl:text-base px-3">
-            <NavLink to={"/about"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "hover:text-[#DE7C62] transition-colors")}>
+            <NavLink onClick={handleClick} className={`hover:text-[#DE7C62] transition-colors ${navColor}`}>
               About Us
             </NavLink>
           </li>
           <li className="lg:text-sm xl:text-base px-3">
-            <NavLink to={"/services"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "hover:text-[#DE7C62] transition-colors")}>
+            <NavLink to={"/services"} className={({ isActive }) => (isActive ? `text-secondary font-black` : `hover:text-[#DE7C62] transition-colors ${navColor}`)}>
               Services
             </NavLink>
           </li>
           <li className="lg:text-sm xl:text-base px-3">
-            <NavLink to={"/portfolio"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "hover:text-[#DE7C62] transition-colors")}>
+            <NavLink to={"/portfolio"} className={({ isActive }) => (isActive ? `text-secondary font-black` : `hover:text-[#DE7C62] transition-colors ${navColor}`)}>
               Portfolio
             </NavLink>
           </li>
           <li className="lg:text-sm xl:text-base px-3">
-            <NavLink to={"/faq"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "hover:text-[#DE7C62] transition-colors")}>
+            <NavLink to={"/faq"} className={({ isActive }) => (isActive ? `text-secondary font-black` : `hover:text-[#DE7C62] transition-colors ${navColor}`)}>
               FAQ
             </NavLink>
           </li>
@@ -57,19 +76,29 @@ const Navbar = () => {
             <IoClose className="text-white active:scale-50 text-5xl md:text-6xl ease-in duration-150" />
           </div>
           <li className="text-md md:text-xl text-white font-extralight">
-            <a href="/">Home</a>
+            <NavLink to={"/"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "")}>
+              Home
+            </NavLink>
           </li>
           <li className="text-md md:text-xl text-white font-extralight">
-            <a href="/">About Us</a>
+            <NavLink to={"/about"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "")}>
+              About
+            </NavLink>
           </li>
           <li className="text-md md:text-xl text-white font-extralight">
-            <a href="/">Services</a>
+            <NavLink to={"/services"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "")}>
+              Services
+            </NavLink>
           </li>
           <li className="text-md md:text-xl text-white font-extralight">
-            <a href="/">Portfolio</a>
+            <NavLink to={"/portfolio"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "")}>
+              Portfolio
+            </NavLink>
           </li>
           <li className="text-md md:text-xl text-white font-extralight">
-            <a href="/">FAQ</a>
+            <NavLink to={"/faq"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "")}>
+              FAQ
+            </NavLink>
           </li>
         </ul>
       </nav>

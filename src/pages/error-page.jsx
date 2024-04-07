@@ -1,5 +1,5 @@
 import React from "react";
-import { useRouteError } from "react-router-dom";
+import { useRouteError, useNavigate } from "react-router-dom";
 import notFoundImage from "../assets/404.svg";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -7,6 +7,7 @@ import Button from "../components/Button";
 
 const ErrorPage = () => {
   const error = useRouteError();
+  const history = useNavigate();
   console.error(error);
   return (
     <>
@@ -22,7 +23,7 @@ const ErrorPage = () => {
                 Error Message : <i>{error.statusText || error.message}</i>
               </p>
             </section>
-            <Button variant={"primary"} type={"clickable"} children={"Go Back"}></Button>
+            <Button link={"/"} children={"Home Page"}></Button>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Button from "../../components/Button";
 import Card from "../../components/Card";
+import Accordion from "../../components/Accordion";
 import aboutImage from "../../assets/about.png";
 import portfolio1 from "../../assets/portfolio/tmekar.png";
 import portfolio2 from "../../assets/portfolio/artha.png";
@@ -37,7 +38,7 @@ const Home = () => {
         <img className="w-full md:max-w-xs md:px-10 lg:max-w-lg lg:px-8" src={aboutImage} alt="" />
       </div>
       {/* Services Section */}
-      <div id="about" className="Services w-full max-w-screen-xl items-center flex flex-col h-auto my-16 mx-auto lg:py-10 px-4 gap-8 xl:gap-10 lg:px-8 xl:px-0">
+      <div className="Services w-full max-w-screen-xl items-center flex flex-col h-auto my-16 mx-auto lg:py-10 px-4 gap-8 xl:gap-10 lg:px-8 xl:px-0">
         <section className="flex justify-center items-center flex-col gap-4">
           <h1 className="text-primary text-center text-xl md:text-start md:text-2xl lg:text-4xl max-w-xl font-black">Our Services</h1>
           <p className="lg:text-base xl:text-xl text-center text-gray-700">We offer comprehensive web, mobile, and system development services.</p>
@@ -49,7 +50,7 @@ const Home = () => {
         </section>
       </div>
       {/* Recent Projects Section */}
-      <div id="about" className="Projects w-full max-w-screen-xl items-center flex flex-col h-auto my-16 mx-auto lg:py-10 px-4 gap-8 xl:gap-10 lg:px-8 xl:px-0">
+      <div className="Projects w-full max-w-screen-xl items-center flex flex-col h-auto my-16 mx-auto lg:py-10 px-4 gap-8 xl:gap-10 lg:px-8 xl:px-0">
         <section className="flex justify-center items-center flex-col gap-4">
           <h1 className="text-primary text-center text-xl md:text-start md:text-2xl lg:text-4xl max-w-xl font-black">Recent Projects</h1>
           <p className="lg:text-base xl:text-xl text-center text-gray-700">Browse through our portfolio of completed projects.</p>
@@ -62,8 +63,21 @@ const Home = () => {
         <Button variant={"primary"} type={"clickable"} children={"View our projects"}></Button>
       </div>
       {/* FAQ Section */}
+      <div className="Projects w-full max-w-screen-xl items-center flex flex-col h-auto my-16 mx-auto lg:py-10 px-4 gap-8 xl:gap-10 lg:px-8 xl:px-0">
+        <section className="flex justify-center items-center flex-col gap-4">
+          <h1 className="text-primary text-xl md:text-start md:text-2xl lg:text-4xl text-center font-black">FAQ</h1>
+          <p className="lg:text-base xl:text-xl max-w-4xl text-center text-gray-700">Find answers to common questions about our services and processes.</p>
+        </section>
+        <div className="flex flex-col justify-center items-center w-full">
+          <Accordion
+            title="What kind of businesses can benefit from your software development services?"
+            content="Our services are tailored for a diverse range of industries. Whether you’re a startup, SME, or a large corporation, we provide customized solutions to meet your specific needs in web, app, and system development. Our expertise is designed to support businesses in any sector to enhance their digital presence and operational efficiency."
+          ></Accordion>
+        </div>
+        <Button variant={"primary"} type={"clickable"} children={"Get in touch"}></Button>
+      </div>
       {/* CTA Section */}
-      <div id="about" className="Projects w-full max-w-screen-xl items-center flex flex-col h-auto my-16 mx-auto lg:py-10 px-4 gap-8 xl:gap-10 lg:px-8 xl:px-0">
+      <div className="Projects w-full max-w-screen-xl items-center flex flex-col h-auto my-16 mx-auto lg:py-10 px-4 gap-8 xl:gap-10 lg:px-8 xl:px-0">
         <section className="flex justify-center items-center flex-col gap-4">
           <h1 className="text-primary text-xl md:text-start md:text-2xl lg:text-4xl text-center font-black">Let&apos;s Take the Next Step Together!</h1>
           <p className="lg:text-base xl:text-xl max-w-4xl text-center text-gray-700">

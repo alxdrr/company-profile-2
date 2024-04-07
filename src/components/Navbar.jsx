@@ -9,7 +9,7 @@ import { useState } from "react";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleNav = () => setNav(!nav);
-  const location = useLocation()
+  const location = useLocation();
   const handleClick = () => {
     const element = document.getElementById("about");
     const offset = 80; // offset based on navbar height
@@ -25,9 +25,13 @@ const Navbar = () => {
       });
     }, 100); // Adjust timeout to ensure redirection to home page is complete before scrolling
   };
-  const navBg = location.pathname === "/" || location.pathname === "/portfolio" ? "bg-primary" : "bg-white"
-  const navColor = location.pathname === "/" || location.pathname === "/portfolio" ? "text-white" : "text-primary"
-  const navBrand = location.pathname === "/" || location.pathname === "/portfolio" ? Logo : Logo2
+
+  const isHomeOrPortfolio = location.pathname === "/" || location.pathname === "/portfolio";
+  const navBg = isHomeOrPortfolio ? "bg-primary" : "bg-white";
+  const navColor = isHomeOrPortfolio ? "text-white" : "text-primary";
+  const navMenuHamburger = isHomeOrPortfolio ? "text-white" : "text-primary";
+  const navBrand = isHomeOrPortfolio ? Logo : Logo2;
+
   return (
     <div className={`w-screen top-0 lg:fixed z-10 ${navBg}`}>
       <div className="hidden lg:flex justify-between items-center h-20 mx-auto px-14 max-w-screen-xl w-full text-white">
@@ -64,7 +68,7 @@ const Navbar = () => {
       {/* Mobile Nav */}
       <nav className="lg:hidden">
         <div onClick={handleNav} className="absolute top-8 right-8 md:top-14 md:right-14 ">
-          {!nav ? <IoMenu className="text-white ease-out duration-700 text-5xl md:text-6xl " /> : <IoMenu size={"0px"} className="ease-out duration-500" />}
+          {!nav ? <IoMenu className={`ease-out duration-700 text-5xl md:text-6xl ${navMenuHamburger}`} /> : <IoMenu size={"0px"} className="ease-out duration-500" />}
         </div>
         <ul
           className={
@@ -74,16 +78,11 @@ const Navbar = () => {
           }
         >
           <div onClick={handleNav} className="absolute top-8 right-8 md:top-14 md:right-14">
-            <IoClose className="text-white active:scale-50 text-5xl md:text-6xl ease-in duration-150" />
+            <IoClose className="text-white" />
           </div>
           <li className="text-md md:text-xl text-white font-extralight">
             <NavLink to={"/"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "")}>
               Home
-            </NavLink>
-          </li>
-          <li className="text-md md:text-xl text-white font-extralight">
-            <NavLink to={"/about"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "")}>
-              About
             </NavLink>
           </li>
           <li className="text-md md:text-xl text-white font-extralight">

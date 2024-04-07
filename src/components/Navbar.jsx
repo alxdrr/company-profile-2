@@ -27,10 +27,11 @@ const Navbar = () => {
   };
   const navBg = location.pathname === "/" || location.pathname === "/portfolio" ? "bg-primary" : "bg-white"
   const navColor = location.pathname === "/" || location.pathname === "/portfolio" ? "text-white" : "text-primary"
+  const navBrand = location.pathname === "/" || location.pathname === "/portfolio" ? Logo : Logo2
   return (
     <div className={`w-screen top-0 lg:fixed z-10 ${navBg}`}>
       <div className="hidden lg:flex justify-between items-center h-20 mx-auto px-14 max-w-screen-xl w-full text-white">
-        <img className="h-10" src={Logo} alt="Forcoms Logo" />
+        <img className="h-10" src={navBrand} alt="Forcoms Logo" />
         <ul className="flex lg:gap-4 xl:gap-10">
           <li className="lg:text-sm xl:text-base px-3">
             <NavLink to={"/"} className={({ isActive }) => (isActive ? `text-secondary font-black` : `hover:text-[#DE7C62] transition-colors ${navColor}`)}>

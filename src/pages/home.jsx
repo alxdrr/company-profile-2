@@ -1,13 +1,13 @@
-import React from "react";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import Button from "../../components/Button";
-import Card from "../../components/Card";
-import Accordion from "../../components/Accordion";
-import aboutImage from "../../assets/about.png";
-import portfolio1 from "../../assets/portfolio/tmekar.png";
-import portfolio2 from "../../assets/portfolio/artha.png";
-import portfolio3 from "../../assets/portfolio/kopi.png";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Button from "../components/Button";
+import CTA from "../components/CTA";
+import Card from "../components/Card";
+import Accordion from "../components/Accordion";
+import aboutImage from "../assets/about.png";
+import portfolio1 from "../assets/portfolio/tmekar.png";
+import portfolio2 from "../assets/portfolio/artha.png";
+import portfolio3 from "../assets/portfolio/kopi.png";
 
 const Home = () => {
   return (
@@ -22,7 +22,7 @@ const Home = () => {
           </div>
           <div className="flex flex-col gap-8 xl:gap-10">
             <div className="text-white lg:text-xl font-normal xl:max-w-xl">Innovative Software House to Bring Your Ideas to Life. We are your trusted partner in web, mobile, and software development.</div>
-            <Button variant={"primary"} children={"Dive in"} type={"clickable"} scrollToId={"about"}></Button>
+            <Button variant={"primary"} title={"Dive in"} type={"clickable"} scrollToId={"about"}></Button>
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@ const Home = () => {
           <p className="max-w-2xl text-center md:text-start lg:text-xl xl:text-xl text-gray-700">
             At our software house, we offer a range of services in web, mobile, and system development. With our expertise and dedication, we provide tailored solutions to meet your unique needs and help you achieve your goals.
           </p>
-          <Button variant={"primary"} type={"clickable"} children={"Contact us"}></Button>
+          <Button variant={"primary"} type={"clickable"} title={"Contact us"}></Button>
         </section>
         <img className="w-full md:max-w-xs md:px-10 lg:max-w-lg lg:px-8" src={aboutImage} alt="" />
       </div>
@@ -50,7 +50,7 @@ const Home = () => {
         </section>
       </div>
       {/* Recent Projects Section */}
-      <div className="Projects w-full max-w-screen-xl items-center flex flex-col h-auto my-16 mx-auto lg:py-10 px-4 gap-8 xl:gap-10 lg:px-8 xl:px-0">
+      <div className="w-full max-w-screen-xl items-center flex flex-col h-auto my-16 mx-auto lg:py-10 px-4 gap-8 xl:gap-10 lg:px-8 xl:px-0">
         <section className="flex justify-center items-center flex-col gap-4">
           <h1 className="text-primary text-center text-xl md:text-start md:text-2xl lg:text-4xl max-w-xl font-black">Recent Projects</h1>
           <p className="lg:text-base xl:text-xl text-center text-gray-700">Browse through our portfolio of completed projects.</p>
@@ -60,10 +60,10 @@ const Home = () => {
           <Card Type={"portfolio"} Title={"Bali Artha Jaya"} Image={portfolio2}></Card>
           <Card Type={"portfolio"} Title={"Kopi Gunung Sari"} Image={portfolio3}></Card>
         </section>
-        <Button variant={"primary"} type={"clickable"} children={"View our projects"}></Button>
+        <Button variant={"primary"} type={"clickable"} title={"View our projects"}></Button>
       </div>
       {/* FAQ Section */}
-      <div className="Projects w-full max-w-screen-xl items-center flex flex-col h-auto my-16 mx-auto lg:py-10 px-4 gap-8 xl:gap-10 lg:px-8 xl:px-0">
+      <div className="w-full max-w-screen-xl items-center flex flex-col h-auto my-16 mx-auto lg:py-10 px-4 gap-8 xl:gap-10 lg:px-8 xl:px-0">
         <section className="flex justify-center items-center flex-col gap-4">
           <h1 className="text-primary text-xl md:text-start md:text-2xl lg:text-4xl text-center font-black">FAQ</h1>
           <p className="lg:text-base xl:text-xl max-w-4xl text-center text-gray-700">Find answers to common questions about our services and processes.</p>
@@ -86,19 +86,10 @@ const Home = () => {
             content="Our services are tailored for a diverse range of industries. Whether you’re a startup, SME, or a large corporation, we provide customized solutions to meet your specific needs in web, app, and system development. Our expertise is designed to support businesses in any sector to enhance their digital presence and operational efficiency."
           ></Accordion>
         </div>
-        <Button variant={"primary"} type={"clickable"} children={"Get in touch"}></Button>
+        <Button variant={"primary"} type={"clickable"} title={"See more"}></Button>
       </div>
       {/* CTA Section */}
-      <div className="Projects w-full max-w-screen-xl items-center flex flex-col h-auto my-16 mx-auto lg:py-10 px-4 gap-8 xl:gap-10 lg:px-8 xl:px-0">
-        <section className="flex justify-center items-center flex-col gap-4">
-          <h1 className="text-primary text-xl md:text-start md:text-2xl lg:text-4xl text-center font-black">Let&apos;s Take the Next Step Together!</h1>
-          <p className="lg:text-base xl:text-xl max-w-4xl text-center text-gray-700">
-            Get in touch with us today to start your digital journey. Whether you&apos;re looking to revamp your website, develop a mobile app, or streamline your operations with custom software, we&apos;re here to make it happen. Drop us a
-            line and let&apos;s make magic together!
-          </p>
-        </section>
-        <Button variant={"primary"} type={"clickable"} children={"Get in touch"}></Button>
-      </div>
+      <CTA />
       {/* Footer */}
       <Footer />
     </>

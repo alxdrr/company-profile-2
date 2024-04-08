@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import Logo from "../assets/logo.svg";
 import Logo2 from "../assets/logo2.svg";
@@ -63,7 +62,7 @@ const Navbar = () => {
             </NavLink>
           </li>
         </ul>
-        <Button variant={"primary"} type={"clickable"} link={"/asdasd"} children={"Get in touch"}></Button>
+        <Button variant={"primary"} type={"clickable"} link={"/asdasd"} title={"Get in touch"}></Button>
       </div>
       {/* Mobile Nav */}
       <nav className="lg:hidden">

@@ -68,7 +68,19 @@ const Home = () => {
           <h1 className="text-primary text-xl md:text-start md:text-2xl lg:text-4xl text-center font-black">FAQ</h1>
           <p className="lg:text-base xl:text-xl max-w-4xl text-center text-gray-700">Find answers to common questions about our services and processes.</p>
         </section>
-        <div className="flex flex-col justify-center items-center w-full">
+        <div className="flex flex-col justify-center gap-3 items-center w-full">
+          <Accordion
+            title="What kind of businesses can benefit from your software development services?"
+            content="Our services are tailored for a diverse range of industries. Whether you’re a startup, SME, or a large corporation, we provide customized solutions to meet your specific needs in web, app, and system development. Our expertise is designed to support businesses in any sector to enhance their digital presence and operational efficiency."
+          ></Accordion>
+          <Accordion
+            title="What kind of businesses can benefit from your software development services?"
+            content="Our services are tailored for a diverse range of industries. Whether you’re a startup, SME, or a large corporation, we provide customized solutions to meet your specific needs in web, app, and system development. Our expertise is designed to support businesses in any sector to enhance their digital presence and operational efficiency."
+          ></Accordion>
+          <Accordion
+            title="What kind of businesses can benefit from your software development services?"
+            content="Our services are tailored for a diverse range of industries. Whether you’re a startup, SME, or a large corporation, we provide customized solutions to meet your specific needs in web, app, and system development. Our expertise is designed to support businesses in any sector to enhance their digital presence and operational efficiency."
+          ></Accordion>
           <Accordion
             title="What kind of businesses can benefit from your software development services?"
             content="Our services are tailored for a diverse range of industries. Whether you’re a startup, SME, or a large corporation, we provide customized solutions to meet your specific needs in web, app, and system development. Our expertise is designed to support businesses in any sector to enhance their digital presence and operational efficiency."

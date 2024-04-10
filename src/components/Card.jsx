@@ -21,10 +21,13 @@ const Card = ({ Icon, Title, Desc, Type, Image, Project }) => {
   } else if (Type === "portfolio-page") {
     return (
       <>
-        <div className="drop-shadow-md w-full bg-white rounded-xl px-4 py-6 | flex flex-col justify-center items-center gap-4 xl:gap-10 | transition-all duration-500 hover:bg-[#DE7C62]">
+        <div className="drop-shadow-md w-full bg-white rounded-xl px-4 py-10 | flex flex-col justify-center items-center gap-4 xl:gap-10 | transition-all duration-500 hover:bg-[#DE7C62]">
           <h1 className="xl:text-3xl lg:text-2xl text-primary text-center font-medium">{Title}</h1>
-          <img className="" src={Image} alt="Portfolio Image" />
-          <h1 className="xl:text-3xl lg:text-2xl text-white  text-center font-medium">{Project}</h1>
+          <div>
+            {" "}
+            <img className="" src={Image} alt="Portfolio Image" />
+            <h1 className="xl:text-2xl lg:text-xl text-white  text-center font-normal">{Project}</h1>
+          </div>
         </div>
       </>
     );

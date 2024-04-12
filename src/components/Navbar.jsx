@@ -65,42 +65,43 @@ const Navbar = () => {
         <Button variant={"primary"} type={"clickable"} link={"/asdasd"} title={"Get in touch"}></Button>
       </div>
       {/* Mobile Nav */}
-      <nav className="lg:hidden">
-        <div onClick={handleNav} className="absolute top-8 right-8 md:top-14 md:right-14 ">
-          {!nav ? <IoMenu className={`ease-out duration-700 text-5xl md:text-6xl ${navMenuHamburger}`} /> : <IoMenu size={"0px"} className="ease-out duration-500" />}
+      <nav className="lg:hidden flex absolute justify-between items-center w-full px-7 top-8 md:top-14">
+        <img src={navBrand} alt="Forcoms Logo" className="h-10 left-8  md:right-14" />
+        <div onClick={handleNav} className="top-8 right-8 md:top-14 md:right-14 ">
+          {!nav ? <IoMenu className={`ease-out duration-700 text-3xl md:text-4xl ${navMenuHamburger}`} /> : <IoMenu size={"0px"} className="ease-out duration-500" />}
         </div>
-        <ul
-          className={
-            nav
-              ? "w-full items-center top-0 fixed py-12 flex flex-col bg-primary gap-10 ease-out duration-500 shadow-xl rounded-3xl"
-              : "w-full items-center py-12 flex flex-col bg-gray-950 gap-10 fixed top-[-100%] ease-in duration-500 shadow-xl rounded-3xl"
-          }
-        >
-          <div onClick={handleNav} className="absolute top-8 right-8 md:top-14 md:right-14">
-            <IoClose className="text-white" />
-          </div>
-          <li className="text-md md:text-xl text-white font-extralight">
-            <NavLink to={"/"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "")}>
-              Home
-            </NavLink>
-          </li>
-          <li className="text-md md:text-xl text-white font-extralight">
-            <NavLink to={"/services"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "")}>
-              Services
-            </NavLink>
-          </li>
-          <li className="text-md md:text-xl text-white font-extralight">
-            <NavLink to={"/portfolio"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "")}>
-              Portfolio
-            </NavLink>
-          </li>
-          <li className="text-md md:text-xl text-white font-extralight">
-            <NavLink to={"/faq"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "")}>
-              FAQ
-            </NavLink>
-          </li>
-        </ul>
       </nav>
+      <ul
+        className={
+          nav
+            ? "w-full items-center top-0 fixed py-12 flex flex-col bg-primary gap-10 ease-out duration-500 shadow-xl rounded-3xl"
+            : "w-full items-center py-12 flex flex-col bg-gray-950 gap-10 fixed top-[-100%] ease-in duration-500 shadow-xl rounded-3xl"
+        }
+      >
+        <div onClick={handleNav} className="absolute top-8 right-8 md:top-14 md:right-14">
+          <IoClose className="text-white" />
+        </div>
+        <li className="text-md md:text-xl text-white font-extralight">
+          <NavLink to={"/"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "")}>
+            Home
+          </NavLink>
+        </li>
+        <li className="text-md md:text-xl text-white font-extralight">
+          <NavLink to={"/services"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "")}>
+            Services
+          </NavLink>
+        </li>
+        <li className="text-md md:text-xl text-white font-extralight">
+          <NavLink to={"/portfolio"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "")}>
+            Portfolio
+          </NavLink>
+        </li>
+        <li className="text-md md:text-xl text-white font-extralight">
+          <NavLink to={"/faq"} className={({ isActive }) => (isActive ? "text-secondary font-black" : "")}>
+            FAQ
+          </NavLink>
+        </li>
+      </ul>
     </div>
   );
 };

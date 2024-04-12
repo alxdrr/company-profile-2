@@ -4,8 +4,8 @@ const Accordion = ({ title, content }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
   const handleClick = () => setAccordionOpen(!accordionOpen);
   return (
-    <div className="flex flex-col w-full max-w-screen-md shadow-md rounded-b-3xl bg-white">
-      <h2 onClick={handleClick} className="text-primary flex justify-between rounded-t-3xl transition-all hover:bg-[#ffebe5] p-6 cursor-pointer">
+    <div className="flex flex-col w-full max-w-screen-md shadow-md rounded-3xl bg-white">
+      <h2 onClick={handleClick} className="text-primary flex justify-between rounded-3xl transition-all hover:bg-[#ffebe5] p-6 cursor-pointer">
         {title}
         <svg className="fill-secondary shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
           <rect y="7" width="16" height="2" rx="1" className={`transform origin-center transition duration-200 ease-out ${accordionOpen && "!rotate-180"}`} />
